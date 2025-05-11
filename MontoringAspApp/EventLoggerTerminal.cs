@@ -43,7 +43,28 @@ class EventLoggerTerminal
         {
             if(e.Entry != null && MatchFilters(e.Entry.Source))
             {
-                Console.WriteLine($"{DateTime.Now:yyyy-MM-dd HH:mm:ss} - {e.Entry.Message}");
+                switch(e.Entry.EntryType)
+                {
+                    case EventLogEntryType.Error:
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine(e.Entry.Message);
+                        Console.ResetColor();
+                        break;
+                    case EventLogEntryType.Warning:
+                        Console.ForegroundColor = ConsoleColor.Yellow;
+                        Console.WriteLine(e.Entry.Message);
+                        Console.ResetColor();
+                        break;
+                    case EventLogEntryType.Information:
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.WriteLine(e.Entry.Message);
+                        Console.ResetColor();
+                        break;
+                    default:
+                        Console.WriteLine($"{DateTime.Now:yyyy-MM-dd HH:mm:ss} - {e.Entry.Message}");
+                        break;
+                }
+
             }
         });
         eventLog.EnableRaisingEvents = true;
