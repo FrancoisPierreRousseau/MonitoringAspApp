@@ -6,6 +6,8 @@ class Program
 {
     static void Main(string[] args)
     {
+        // Debugger.Launch();
+
         if(args.Length != 1)
         {
             Console.WriteLine("Usage: EventLoggerTerminal.exe <config_file.json>");

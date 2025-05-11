@@ -40,9 +40,28 @@ Le fichier `config.json` permet de configurer les sources et les filtres pour su
 2. Exécuter le projet :
 
 ```bash
-cd EventLoggerTerminalApp
+cd MontoringAspApp
  dotnet run -- config.json
 ```
+
+---
+
+## Lancer le projet en mode debug
+
+Placer le code suivant au début du projet
+```csharp
+Debugger.Launch();
+```
+
+Cela attachera le debugger lors de l'éxécution du processus.  
+
+Lancez le projet:
+
+```bash
+cd MontoringAspApp
+ dotnet run -- config.json
+```
+
 
 ---
 
