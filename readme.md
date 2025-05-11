@@ -37,13 +37,7 @@ Le fichier `config.json` permet de configurer les sources et les filtres pour su
 ## 🚀 Lancer le projet
 1. Ouvrir un terminal en **mode administrateur**.
 
-2. Créer la source EventLog :
-
-```powershell
-New-EventLog -LogName Application -Source "MyApiSource"
-```
-
-3. Exécuter le projet :
+2. Exécuter le projet :
 
 ```bash
 cd EventLoggerTerminalApp
@@ -53,6 +47,12 @@ cd EventLoggerTerminalApp
 ---
 
 ## 🛠️ Exemple d'API ASP.NET loguant dans l'EventLog
+
+### Créer la source EventLog en utilisant powershell
+
+```powershell
+New-EventLog -LogName Application -Source "MyApiSource"
+```
 
 ### Program.cs
 ---
