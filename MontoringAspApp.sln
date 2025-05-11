@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35527.113 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MontoringAspApp", "MontoringAspApp\MontoringAspApp.csproj", "{DCBCE646-9DC8-4F23-846C-12730873368A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Éléments de solution", "Éléments de solution", "{A6F568DD-CFC3-4AF6-A8BE-8C00373CBD9B}"
+	ProjectSection(SolutionItems) = preProject
+		readme.md = readme.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DCBCE646-9DC8-4F23-846C-12730873368A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCBCE646-9DC8-4F23-846C-12730873368A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCBCE646-9DC8-4F23-846C-12730873368A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCBCE646-9DC8-4F23-846C-12730873368A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

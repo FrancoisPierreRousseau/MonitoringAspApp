@@ -1,0 +1,7 @@
+{
+  "log_type": "Application",
+  "filters": [
+    ".*MyApiSource.*",
+    ".*Warning.*"
+  ]
+}
