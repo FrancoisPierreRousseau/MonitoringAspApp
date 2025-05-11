@@ -1,7 +1,0 @@
-{
-  "log_type": "Application",
-  "filters": [
-    ".*Error.*",
-    ".*Warning.*"
-  ]
-}
