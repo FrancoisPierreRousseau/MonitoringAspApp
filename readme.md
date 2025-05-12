@@ -159,7 +159,9 @@ Ce projet permet de centraliser les logs d'applications ASP.NET Core en temps r�
 
 // Réfléchir à un début de systéme pour récupérer des logs stocké chez des clients (cela peut être intéréssant de les considérer).
 // car c'est des données produites en temps réél. 
-// En utilisant le partionnement déclaratif on pourrait ordonnée les données inséré par (type de log / dates)
+// En utilisant le partionnement déclaratif on pourrait ordonnée les données inséré par (type de log / dates).
+// Pour récupérer des logs à distance, ont utilise pas mal le protocole RFC qui est spécifiquement conçus pour cela.
+// Ce sont des log définit en format standardisé pour les messages Syslog.
 
 ## Considération
 
