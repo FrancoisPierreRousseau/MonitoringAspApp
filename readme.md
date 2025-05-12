@@ -155,3 +155,30 @@ Accéder à : `http://localhost:5000/api/produit/test-log`
 
 ## ✅ Conclusion
 Ce projet permet de centraliser les logs d'applications ASP.NET Core en temps réel dans un terminal. Il est particulièrement utile pour les environnements de développement et de test où l'Observateur d'événements n'est pas suffisant ou ergonomique.
+
+
+
+
+## Considération
+
+Dans le cadre du projet, il est pertinent de considérer l'envoi des logs vers une base de données au lieu de simplement les afficher dans le terminal. Cette approche présente plusieurs avantages :
+
+1. **Centralisation des données :** En stockant les logs dans une base de données, il devient possible de centraliser les informations provenant de multiples sources d'événements. Cela permet d'avoir une vision consolidée des logs pour l'ensemble du système.
+
+2. **Requêtes avancées et analyses :** Les bases de données permettent d'exécuter des requêtes complexes pour filtrer, agréger ou analyser les données de logs. Cela peut être essentiel pour des rapports ou des analyses post-mortem.
+
+3. **Persistance des données :** Contrairement à un affichage temporaire dans le terminal, les logs stockés en base de données sont persistants et peuvent être conservés à long terme pour des audits ou des analyses historiques.
+
+4. **Scalabilité :** Une base de données bien conçue peut gérer un volume de logs conséquent et croissant, ce qui est particulièrement important pour des applications critiques ou à forte volumétrie.
+
+### Partitionnement déclaratif
+
+Pour gérer efficacement le volume de données, il peut être pertinent de mettre en place un partitionnement déclaratif au niveau des tables de logs. Ce mécanisme consiste à diviser physiquement les données en segments logiques basés sur des critères définis (par exemple, par date ou par type de log).
+
+#### **Avantages du partitionnement déclaratif :**
+
+* **Optimisation des performances :** Les requêtes ciblant des plages de données spécifiques accèdent uniquement aux partitions concernées, réduisant ainsi le temps de traitement.
+* **Gestion des données historiques :** Les partitions plus anciennes peuvent être archivées ou supprimées plus facilement sans affecter les données récentes.
+* **Scalabilité accrue :** Les tables partitionnées peuvent être réparties sur plusieurs disques ou serveurs, améliorant la capacité de traitement des logs.
+
+Pour plus de détails sur la mise en œuvre du partitionnement déclaratif, vous pouvez consulter la documentation suivante : [Partitionnement Déclaratif](https://github.com/FrancoisPierreRousseau/database/blob/main/optimisation/Partitionnement%20D%C3%A9claratif.md).
