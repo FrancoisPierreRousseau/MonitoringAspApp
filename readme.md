@@ -157,7 +157,9 @@ Accéder à : `http://localhost:5000/api/produit/test-log`
 Ce projet permet de centraliser les logs d'applications ASP.NET Core en temps réel dans un terminal. Il est particulièrement utile pour les environnements de développement et de test où l'Observateur d'événements n'est pas suffisant ou ergonomique.
 
 
-
+// Réfléchir à un début de systéme pour récupérer des logs stocké chez des clients (cela peut être intéréssant de les considérer).
+// car c'est des données produites en temps réél. 
+// En utilisant le partionnement déclaratif on pourrait ordonnée les données inséré par (type de log / dates)
 
 ## Considération
 
